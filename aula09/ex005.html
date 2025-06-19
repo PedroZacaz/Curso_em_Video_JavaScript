@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+    <style>
+        body{
+            background-color: rgb(73, 84, 210);
+            color: white;
+            font: normal 18pt Arial;
+        }
+        h1{
+            color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[1]
+        var corpo = window.document.body
+
+        //Seletor por Seletor
+        var d = window.document.querySelector('div#msg')
+        d.style.background = 'black'
+        
+        //Seletor por name
+        /* var d = document.getElementsByName('msg')[0]
+        d.innerText = 'Olá' */
+
+        //Seletor por ID
+        /* var d = document.getElementById('msg')
+        d.style.background = 'orange'
+        d.innerText = 'Estou aguardando...' */
+        
+        //Explicando o funcionamento dos seletores
+        /* window.document.write(`Está escrito assim ${p1.innerText}`) */ /* innerText faz mostrar o texto que está na variavel */
+        /* p1.style.color = 'orange'
+        corpo.style.background = 'black' */  
+        /* document.write(p1.innerHTML) */
+    </script>
+</body>
+</html>

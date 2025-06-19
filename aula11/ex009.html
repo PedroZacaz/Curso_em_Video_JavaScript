@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onde você mora?</title>
+</head>
+<body>
+    <h1>Vamos descobrir o seu país.</h1>
+    Onde está você: <input type="text" id="txtp">
+    <input type="button" value="Descobrir" onclick="descobrir()">
+    <div id="res">Você é...</div>
+
+    <script>
+        function descobrir(){
+            var txtpais = document.querySelector('input#txtp')
+            var res = document.querySelector('div#res')
+            var pais = String(txtpais.value)
+            res.innerHTML = `Você mora: ${pais}`
+            if (pais == 'Brasil'){
+                res.innerHTML += `<p>Brasileiro, Parabéns!!!</p>`
+            } else {
+                res.innerHTML += `<p>Estrangeiro, mora em ${pais}</p>`
+            }
+        }
+        
+    </script>
+</body>
+</html>
